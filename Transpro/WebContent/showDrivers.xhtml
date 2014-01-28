@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml"
+		xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:p="http://primefaces.org/ui">
+
+
+	<ui:define name="content">
+		<p>Lista kierowców</p>
+		
+		<h:form id = "driverList">
+	
+	<h:dataTable value="#{driverManBean.drivers}" var="item">
+      <f:facet name="header">Kierowcy</f:facet>
+      
+     <h:column>
+        <f:facet name="header">Id</f:facet>
+        #{item.id}
+      </h:column>
+     
+      <h:column>
+        <f:facet name="header">Imię</f:facet>
+        #{item.name}
+      </h:column>
+      
+      <h:column>
+        <f:facet name="header">Nazwisko</f:facet>
+        #{item.surname}
+      </h:column>
+      
+     <h:column>
+        <f:facet name="header">Status</f:facet>
+        #{item.available}
+      </h:column>
+      
+       <h:column>
+        <f:facet name="header">delete</f:facet>
+        <h:commandLink value="deleteDriver" action="#{driverManBean.deleteDriver}"/>
+      </h:column>
+      
+     </h:dataTable>
+     
+    
+
+  
+      
+    </h:form>
+		
+		
+	</ui:define>
+</ui:composition>

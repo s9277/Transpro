@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml"
+		xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:p="http://primefaces.org/ui">
+
+
+	<ui:define name="content">
+		<p>Zarządzanie - kadra kierowców</p>
+		
+		<h:form id = "driverForm">
+	
+	<h:outputText value = "Imię"></h:outputText>	<br />
+  <h:inputText id = "name" value = "#{driverManBean.driver.name}" ></h:inputText><br />
+  <h:outputText value = "Nazwisko"></h:outputText>	<br />
+  <h:inputText id = "surname" value = "#{driverManBean.driver.surname}"></h:inputText><br />
+ 
+     
+     <h:commandButton value="Ok" action="#{driverManBean.addDriver}" />
+
+   
+
+  
+      
+    </h:form>
+		
+		
+	</ui:define>
+</ui:composition>

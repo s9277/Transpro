@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml"
+		xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:p="http://primefaces.org/ui">
+
+
+	<ui:define name="content">
+		<p>Zarządzanie - flota pojazdów</p>
+		
+		<h:form id = "carForm">
+	
+	<h:outputText value = "Marka"></h:outputText>	<br />
+  <h:inputText id = "mark" value = "#{carManBean.car.mark}"></h:inputText><br />
+  <h:outputText value = "Numer rejestracji"></h:outputText>	<br />
+  <h:inputText id = "regNr" value = "#{carManBean.car.regNr}"></h:inputText><br />
+  <h:outputText value = "Typ"></h:outputText>	<br />
+  <h:inputText id = "type" value = "#{carManBean.car.type}"></h:inputText><br />
+     
+     <h:commandButton value="Ok" action="#{carManBean.addCar}" />
+
+  
+      
+    </h:form>
+		
+		
+	</ui:define>
+</ui:composition>

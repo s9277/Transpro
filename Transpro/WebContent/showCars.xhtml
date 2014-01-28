@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml"
+		xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:p="http://primefaces.org/ui">
+
+
+	<ui:define name="content">
+		<p>Lista pojazdów</p>
+		
+		<h:form id = "carList">
+	
+	<h:dataTable value="#{carManBean.cars}" var="item">
+      <f:facet name="header">pojazdy</f:facet>
+      
+      
+       
+      <h:column>
+        <f:facet name="header">Id</f:facet>
+        #{item.id}
+      </h:column>
+      
+      
+      <h:column>
+        <f:facet name="header">marka</f:facet>
+        #{item.mark}
+      </h:column>
+      
+      <h:column>
+        <f:facet name="header">typ</f:facet>
+        #{item.type}
+      </h:column>
+      
+      <h:column>
+        <f:facet name="header">Nr rej</f:facet>
+        #{item.regNr}
+      </h:column>
+      
+       <h:column>
+        <f:facet name="header">delete</f:facet>
+        <h:commandLink value="deleteCar" action="#{carManBean.deleteCar}"/>
+      </h:column>
+      
+     </h:dataTable>
+     
+    
+
+  
+      
+    </h:form>
+		
+		
+	</ui:define>
+</ui:composition>

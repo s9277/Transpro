@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml"
+		xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:p="http://primefaces.org/ui">
+
+
+	<ui:define name="content">
+		<p>Zarządzanie - trasy</p>
+		
+		<h:form id = "routeForm">
+
+
+<h:panelGrid columns="4">
+	
+	<h:outputText value="Kierowca:"></h:outputText>
+	<h:selectOneMenu value="#{routeBean.driverId}">
+		<f:selectItems value="#{routeBean.availableDrivers}"  var="driver" itemValue="#{driver.id}"  
+		itemLabel="#{driver.name} #{driver.surname}" >
+		</f:selectItems>
+	</h:selectOneMenu>
+	
+	<h:outputText value="Samochód:"></h:outputText>
+	<h:selectOneMenu value="#{routeBean.carId}">
+		<f:selectItems value="#{routeBean.availableCars}" var="car" itemValue="#{car.id}" 
+		 itemLabel="#{car.mark} #{car.regNr}">
+		</f:selectItems>
+	
+	</h:selectOneMenu>
+	
+	<h:outputText value="Wyjazd z:" ></h:outputText>
+	<h:inputText id="source" value="#{routeBean.route.source}"></h:inputText>
+	<h:outputText value="Cel:"  ></h:outputText>
+	<h:inputText id="destination" value="#{routeBean.route.destination}"></h:inputText>
+	
+	
+	
+	</h:panelGrid>
+
+    
+     
+     <h:commandButton value="utwórz" action="#{routeBean.createRoute}" />
+
+  
+      
+    </h:form>
+		
+		
+	</ui:define>
+</ui:composition>

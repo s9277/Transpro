@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+  <div>
+	<h:form>
+	  <ul>
+		<li>
+		  <h:commandLink action="home?faces-redirect=true">
+			<h:outputText value="#{msg.linkHome}" />
+		  </h:commandLink>
+		</li>
+		<li>
+		  <h:commandLink action="carMan?faces-redirect=true">
+			<h:outputText value="Zarządzanie - flota pojazdów" />
+		  </h:commandLink>
+		</li>
+		<li>
+		  <h:commandLink action="showCars?faces-redirect=true">
+			<h:outputText value="Lista pojazdów" />
+		  </h:commandLink>
+		  </li>
+		  
+		  <li>
+		  <h:commandLink action="driverMan?faces-redirect=true">
+			<h:outputText value="Zarządzanie - kadra kierowców" />
+		  </h:commandLink>
+		  </li>
+		  
+		  <li>
+		  <h:commandLink action="showDrivers?faces-redirect=true">
+			<h:outputText value="Lista kierowców" />
+		  </h:commandLink>
+		  </li>
+		  
+		   <li>
+		  <h:commandLink action="routeMan?faces-redirect=true">
+			<h:outputText value="Zarządzanie - trasy" />
+		  </h:commandLink>
+		  </li>
+		  
+		  <li>
+		  <h:commandLink action="showRoutes?faces-redirect=true">
+			<h:outputText value="Lista Tras" />
+		  </h:commandLink>
+		  </li>
+		
+	</ul>	
+   </h:form>
+  </div>
+</ui:composition>
