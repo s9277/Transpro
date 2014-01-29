@@ -119,8 +119,15 @@ public class Car {
 	}
 
 
-
-
+	@Transient
+	public String getStatus(){
+		if(this.getAvailable().equals(true)){
+			return "dostêpny";
+		}
+		else{
+			return "niedostêpny";
+		}
+	}
 	
 
 	

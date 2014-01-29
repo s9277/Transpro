@@ -4,8 +4,7 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	template="/templates/default.xhtml"
-		xmlns:a4j="http://richfaces.org/a4j"
-      xmlns:rich="http://richfaces.org/rich"
+	
       xmlns:p="http://primefaces.org/ui">
 
 
@@ -21,7 +20,7 @@
   <h:outputText value = "Typ"></h:outputText>	<br />
   <h:inputText id = "type" value = "#{carManBean.car.type}"></h:inputText><br />
      
-     <h:commandButton value="Ok" action="#{carManBean.addCar}" />
+     <h:commandButton value="Dodaj pojazd" action="#{carManBean.addCar}" />
 
   
       
